@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class Camara : MonoBehaviour
 {
-    float rotacionx = 0f;
-    float rotaciony = 0f;
-    bool camaraON;
-    public GameObject botonCamara;
+    static bool camaraON = false;
+    bool pulsando = false;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +17,44 @@ public class Camara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void MoverCamara()
-    {
-        if (Input.GetMouseButtonDown(0))
+        if (camaraON == true)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
+            MoverCamara();
+        }
+    }
 
-            rotacionx += mouseX;
-            rotaciony += mouseY;
-
-            transform.eulerAngles = new Vector3(-rotaciony, rotacionx, 0);
+    public void ActivarCamara() 
+    {
+        if (camaraON == false)
+        {
             camaraON = true;
         }
         else
         {
             camaraON = false;
-            //transform.position = new Vector3(551, 6.9, -3.1);
+        }
+    }
+    public void MoverCamara()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            pulsando=true;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            pulsando = false;
+            //transform.position = new Vector3(551, 6.9f, -3.1f);
+        }
+
+
+        if (pulsando == true) 
+        {
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+
+            Debug.Log(mouseX + " " + mouseY);
+
+            transform.position = new Vector3(transform.position.x - mouseX * 0.2f, transform.position.y, transform.position.z - mouseY * 0.2f);
         }
     }
 }

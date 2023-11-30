@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 92892076}
         m_TargetAssemblyTypeName: Camara, Assembly-CSharp
-        m_MethodName: MoverCamara
+        m_MethodName: ActivarCamara
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -264,12 +264,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92892071}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonCamara: {fileID: 92892071}
 --- !u!1 &331019477
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +748,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -824,7 +824,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.27038044, y: -0, z: -0, w: 0.96275353}
-  m_LocalPosition: {x: 551, y: 6.9, z: -3.1}
+  m_LocalPosition: {x: 551, y: 13, z: 743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -842,7 +842,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonCamara: {fileID: 0}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arboles:
+  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
+  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
 --- !u!1 &1068253919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,6 +1082,7 @@ GameObject:
   - component: {fileID: 1494774704}
   - component: {fileID: 1494774703}
   - component: {fileID: 1494774702}
+  - component: {fileID: 1494774705}
   m_Layer: 5
   m_Name: BotonCrear
   m_TagString: Untagged
@@ -1138,7 +1153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1494774703}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1494774705}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1494774703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,6 +1204,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494774700}
   m_CullTransparentMesh: 1
+--- !u!114 &1494774705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494774700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arboles:
+  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
+  - {fileID: 0}
 --- !u!1 &1531882022
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,14 +16,16 @@ public class Crear : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {            
-            /*
-            GameObject arboles = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-            RaycastHit objetillo;
-            Physics.Raycast(rayobjecto, out objetillo);
-            arboles.transform.position = objetillo.gameObject;
+           
             Ray rayobjecto = Camera.main.ScreenPointToRay(Input.mousePosition);
-            */
+            RaycastHit objetillo;
+            if(Physics.Raycast(rayobjecto, out objetillo))
+            {
+                
+                GameObject.Instantiate(arboles[0],objetillo.point , Quaternion.identity);
 
+            }
+         
         }
     }
 }
