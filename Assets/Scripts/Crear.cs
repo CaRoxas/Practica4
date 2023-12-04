@@ -6,6 +6,7 @@ public class Crear : MonoBehaviour
 {
     public GameObject[] arboles = new GameObject[3];
     public GameObject Panel;
+    bool crearON = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +16,29 @@ public class Crear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (crearON == true)
+        {
+            Creacion();
+        }
     }
     public void PanelOn() 
     {
         Panel.SetActive(true);
     }
-    public void Creacion()
+    public void ActivarCrear() 
     {
+        if (crearON == false)
+        {
+            crearON = true;
+        }
+        else
+        {
+            crearON = false;
+        }
+    }
+    void Creacion()
+    {
+
         if (Input.GetMouseButtonDown(0))
         {            
            

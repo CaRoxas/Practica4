@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Camara : MonoBehaviour
 {
@@ -20,6 +21,18 @@ public class Camara : MonoBehaviour
         if (camaraON == true)
         {
             MoverCamara();
+            if (gameObject.tag == "BotonCrear")
+            {
+                gameObject.SetActive(false);
+            }
+            if (gameObject.tag == "BotonMundo")
+            {
+                gameObject.SetActive(false);
+            }
+            if (gameObject.tag == "BotonMundo")
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -38,12 +51,11 @@ public class Camara : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            pulsando=true;
+            pulsando = true;
         }
         else if (Input.GetMouseButtonUp(0))
         {
             pulsando = false;
-            //transform.position = new Vector3(551, 6.9f, -3.1f);
         }
 
 

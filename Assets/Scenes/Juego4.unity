@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 92892076}
   m_Layer: 5
   m_Name: BotonCamara
-  m_TagString: Untagged
+  m_TagString: BotonCamara
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92892071}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arboles:
-  - {fileID: 0}
+  - {fileID: 2516592018781981339, guid: b1b541cd057180b4eaefd834c2acf04e, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   Panel: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 426390599}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: Creacion
+        m_MethodName: ActivarCrear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1454,13 +1454,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27038044, y: -0, z: -0, w: 0.96275353}
+  m_LocalRotation: {x: 0.23624331, y: -0, z: -0, w: 0.971694}
   m_LocalPosition: {x: 551, y: 7, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 31.374, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.33, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
@@ -1554,7 +1554,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: c719e38f25a9480abd2480ab621a2949, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -1635,8 +1635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arboles:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 919132149155446097, guid: 77293aa65e1f3e845aeed33f34fdf254, type: 3}
+  - {fileID: 919132149155446097, guid: 77293aa65e1f3e845aeed33f34fdf254, type: 3}
   - {fileID: 0}
   Panel: {fileID: 0}
 --- !u!114 &1328533289
@@ -1685,7 +1685,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1328533288}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: Creacion
+        m_MethodName: ActivarCrear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 1381581069}
   m_Layer: 5
   m_Name: BotonMundo
-  m_TagString: Untagged
+  m_TagString: BotonMundo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1895,7 @@ GameObject:
   - component: {fileID: 1494774705}
   m_Layer: 5
   m_Name: BotonCrear
-  m_TagString: Untagged
+  m_TagString: BotonCrear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2179,7 +2179,7 @@ GameObject:
   - component: {fileID: 1621667771}
   m_Layer: 5
   m_Name: BotonTotal
-  m_TagString: Untagged
+  m_TagString: BotonTotal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2457,7 +2457,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1989054457}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: Creacion
+        m_MethodName: ActivarCrear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
