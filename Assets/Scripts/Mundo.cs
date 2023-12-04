@@ -18,7 +18,6 @@ public class Mundo : MonoBehaviour
     }
     public void Global()
     {
-        camara.transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-        //camara.transform.rotation = (0, 0, 0);
+        camara.transform.position = new Vector3 (551, 7, -1);
     }
 }

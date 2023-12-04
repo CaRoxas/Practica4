@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Total : MonoBehaviour
 {
-    public GameObject cositas;
+    public GameObject[] cositas;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class Total : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cositas.SetActive(true);
+        Debug.Log(Equals(cositas.Length));
     }
 }
