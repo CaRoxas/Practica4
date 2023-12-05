@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 92892076}
   m_Layer: 5
   m_Name: BotonCamara
-  m_TagString: BotonCamara
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,6 +269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonCrear: {fileID: 1494774700}
+  BotonMundo: {fileID: 1381581064}
+  BotonTotal: {fileID: 1621667769}
 --- !u!1 &331019477
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +421,7 @@ GameObject:
   - component: {fileID: 426390599}
   m_Layer: 5
   m_Name: Arbol1
-  m_TagString: Untagged
+  m_TagString: Arbol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,16 +453,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426390597}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arboles:
-  - {fileID: 2516592018781981339, guid: b1b541cd057180b4eaefd834c2acf04e, type: 3}
+  Objetos:
+  - {fileID: 919132149155446097, guid: ba9d4b5c673999245a147da9b5bd9092, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   Panel: {fileID: 0}
+  BotonCamara: {fileID: 0}
+  BotonTotal: {fileID: 0}
+  BotonMundo: {fileID: 0}
 --- !u!114 &426390600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +512,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 426390599}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: ActivarCrear
+        m_MethodName: CreacionElemento
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1473,6 +1479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 588b8cd9f034d134d9cf252fcac23be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonCrear: {fileID: 0}
+  BotonMundo: {fileID: 0}
+  BotonTotal: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,11 +1494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arboles:
-  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
-  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
-  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
+  Objetos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Panel: {fileID: 0}
+  BotonCamara: {fileID: 0}
+  BotonTotal: {fileID: 0}
+  BotonMundo: {fileID: 0}
 --- !u!1 &1068253919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,16 +1641,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328533286}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arboles:
-  - {fileID: 919132149155446097, guid: 77293aa65e1f3e845aeed33f34fdf254, type: 3}
-  - {fileID: 919132149155446097, guid: 77293aa65e1f3e845aeed33f34fdf254, type: 3}
+  Objetos:
+  - {fileID: 0}
+  - {fileID: 919132149155446097, guid: 7a1a4a24178d97b458d822e6e757e4e6, type: 3}
   - {fileID: 0}
   Panel: {fileID: 0}
+  BotonCamara: {fileID: 0}
+  BotonTotal: {fileID: 0}
+  BotonMundo: {fileID: 0}
 --- !u!114 &1328533289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,7 +1700,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1328533288}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: ActivarCrear
+        m_MethodName: CreacionElemento
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1748,7 +1763,7 @@ GameObject:
   - component: {fileID: 1381581069}
   m_Layer: 5
   m_Name: BotonMundo
-  m_TagString: BotonMundo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1880,6 +1895,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 963194225}
+  BotonCamara: {fileID: 92892071}
+  BotonCrear: {fileID: 1494774700}
+  BotonTotal: {fileID: 1621667769}
 --- !u!1 &1494774700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,7 +1913,7 @@ GameObject:
   - component: {fileID: 1494774705}
   m_Layer: 5
   m_Name: BotonCrear
-  m_TagString: BotonCrear
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1967,7 +1985,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1494774705}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: PanelOn
+        m_MethodName: ActivarCrear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2027,10 +2045,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arboles:
-  - {fileID: 919132149155446097, guid: 4076d66bd13821c409f8acaaf317724c, type: 3}
+  Objetos:
+  - {fileID: 919132149155446097, guid: ba9d4b5c673999245a147da9b5bd9092, type: 3}
+  - {fileID: 919132149155446097, guid: 7a1a4a24178d97b458d822e6e757e4e6, type: 3}
   - {fileID: 0}
   Panel: {fileID: 601843089}
+  BotonCamara: {fileID: 92892071}
+  BotonTotal: {fileID: 1621667769}
+  BotonMundo: {fileID: 1381581064}
 --- !u!1 &1531882022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2201,7 @@ GameObject:
   - component: {fileID: 1621667771}
   m_Layer: 5
   m_Name: BotonTotal
-  m_TagString: BotonTotal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2401,16 +2423,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989054455}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a989c7d056470434a81728129ad8a17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arboles:
+  Objetos:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   Panel: {fileID: 0}
+  BotonCamara: {fileID: 0}
+  BotonTotal: {fileID: 0}
+  BotonMundo: {fileID: 0}
 --- !u!114 &1989054458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2457,7 +2482,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1989054457}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: ActivarCrear
+        m_MethodName: CreacionElemento
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

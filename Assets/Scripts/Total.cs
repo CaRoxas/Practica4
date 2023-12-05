@@ -14,6 +14,6 @@ public class Total : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Equals(cositas.Length));
+        //GameObject.FindGameObjectsWithTag("Arbol1").Length;
     }
 }

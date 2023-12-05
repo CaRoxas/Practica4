@@ -8,7 +8,10 @@ public class Camara : MonoBehaviour
 {
     static bool camaraON = false;
     bool pulsando = false;
-  
+    public GameObject BotonCrear;
+    public GameObject BotonMundo;
+    public GameObject BotonTotal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,18 +24,6 @@ public class Camara : MonoBehaviour
         if (camaraON == true)
         {
             MoverCamara();
-            if (gameObject.tag == "BotonCrear")
-            {
-                gameObject.SetActive(false);
-            }
-            if (gameObject.tag == "BotonMundo")
-            {
-                gameObject.SetActive(false);
-            }
-            if (gameObject.tag == "BotonMundo")
-            {
-                gameObject.SetActive(false);
-            }
         }
     }
 
@@ -41,10 +32,18 @@ public class Camara : MonoBehaviour
         if (camaraON == false)
         {
             camaraON = true;
+            // desactivar
+            BotonCrear.SetActive(false);
+            BotonTotal.SetActive(false);
+            BotonMundo.SetActive(false);
         }
         else
         {
             camaraON = false;
+            // activar botons
+            BotonCrear.SetActive(true);
+            BotonTotal.SetActive(true);
+            BotonMundo.SetActive(true);
         }
     }
     public void MoverCamara()

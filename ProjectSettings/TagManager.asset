@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BotonCamara
-  - BotonCrear
-  - BotonTotal
-  - BotonMundo
+  - Arbol
+  - Frutal
+  - Granero
   layers:
   - Default
   - TransparentFX

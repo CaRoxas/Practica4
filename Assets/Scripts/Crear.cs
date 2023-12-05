@@ -4,39 +4,43 @@ using UnityEngine;
 
 public class Crear : MonoBehaviour
 {
-    public GameObject[] arboles = new GameObject[3];
+    public GameObject[] Objetos = new GameObject[3];
     public GameObject Panel;
     bool crearON = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject BotonCamara;
+    public GameObject BotonTotal;
+    public GameObject BotonMundo;
+    static int numeroSeleccionado = 0;
     // Update is called once per frame
     void Update()
     {
         if (crearON == true)
         {
-            Creacion();
+            // ¿ que opcion se ha elegido?
+            CreacionElemento();
         }
-    }
-    public void PanelOn() 
-    {
-        Panel.SetActive(true);
     }
     public void ActivarCrear() 
     {
         if (crearON == false)
         {
             crearON = true;
+            Panel.SetActive(true);
+            BotonCamara.SetActive(false);
+            BotonTotal.SetActive(false);
+            BotonMundo.SetActive(false);
         }
         else
         {
             crearON = false;
+            BotonCamara.SetActive(true);
+            BotonTotal.SetActive(true);
+            BotonMundo.SetActive(true);
+            Panel.SetActive(false);
         }
     }
-    void Creacion()
+    // PERSONAJE
+    public void CreacionElemento()
     {
 
         if (Input.GetMouseButtonDown(0))
@@ -46,9 +50,25 @@ public class Crear : MonoBehaviour
             RaycastHit objetillo;
             if(Physics.Raycast(rayobjecto, out objetillo))
             {
-                GameObject.Instantiate(arboles[0],objetillo.point , Quaternion.identity);
+                GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90, 0, 0));
             }
          
         }
+    }
+
+
+    // BOTONES
+    public void CreacionArbol()
+    {
+
+        numeroSeleccionado = 0;
+    }
+    public void CreacionFrutal()
+    {
+        numeroSeleccionado = 1;
+    }
+    public void CreacionGranero()
+    {
+        numeroSeleccionado = 2;
     }
 }
