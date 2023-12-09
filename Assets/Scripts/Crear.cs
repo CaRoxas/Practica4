@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class Crear : MonoBehaviour
 {
-    public GameObject[] Objetos = new GameObject[3];
+    public GameObject[] Objetos = new GameObject[4];
     public GameObject Panel;
+    public TMP_Text Back;
     bool crearON = false;
     public GameObject BotonCamara;
     public GameObject BotonTotal;
@@ -29,6 +32,7 @@ public class Crear : MonoBehaviour
             BotonCamara.SetActive(false);
             BotonTotal.SetActive(false);
             BotonMundo.SetActive(false);
+            Back.text = "Atrás";
         }
         else
         {
@@ -37,6 +41,7 @@ public class Crear : MonoBehaviour
             BotonTotal.SetActive(true);
             BotonMundo.SetActive(true);
             Panel.SetActive(false);
+            Back.text = "Crear";
         }
     }
     // PERSONAJE
@@ -44,13 +49,14 @@ public class Crear : MonoBehaviour
     {
 
         if (Input.GetMouseButtonDown(0))
-        {            
-           
+        {
             Ray rayobjecto = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit objetillo;
-            if(Physics.Raycast(rayobjecto, out objetillo))
+            int mascara = LayerMask.GetMask("Suelo");
+            if(Physics.Raycast(rayobjecto, out objetillo, mascara))
             {
-                GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90, 0, 0));
+                GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90 , 0, 0));
+
             }
          
         }
@@ -60,7 +66,6 @@ public class Crear : MonoBehaviour
     // BOTONES
     public void CreacionArbol()
     {
-
         numeroSeleccionado = 0;
     }
     public void CreacionFrutal()
@@ -70,5 +75,9 @@ public class Crear : MonoBehaviour
     public void CreacionGranero()
     {
         numeroSeleccionado = 2;
+    }
+    public void CreacionLago()
+    {
+        numeroSeleccionado = 3;
     }
 }
