@@ -2580,7 +2580,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1621667772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2633,6 +2633,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cositas: []
   calculo: {fileID: 1478875040}
+  BotonCamara: {fileID: 92892071}
+  BotonCrear: {fileID: 1494774700}
+  BotonMundo: {fileID: 1381581064}
 --- !u!1 &1838407263
 GameObject:
   m_ObjectHideFlags: 0
