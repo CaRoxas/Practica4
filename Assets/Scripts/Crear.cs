@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.EventSystems;
 
 public class Crear : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class Crear : MonoBehaviour
     {
         if (crearON == true)
         {
-            // ¿ que opcion se ha elegido?
             CreacionElemento();
         }
     }
@@ -48,14 +48,19 @@ public class Crear : MonoBehaviour
     public void CreacionElemento()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Ray rayobjecto = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit objetillo;
             int mascara = LayerMask.GetMask("Suelo");
             if(Physics.Raycast(rayobjecto, out objetillo, mascara))
             {
-                GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90 , 0, 0));
+               GameObject objetoCreado =  GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90 , 0, 0));
+
+                if (numeroSeleccionado == 2)
+                {
+                   objetoCreado.transform.Rotate(90, -90, 0);
+                }
 
             }
          
