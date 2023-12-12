@@ -47,31 +47,33 @@ public class Crear : MonoBehaviour
     // PERSONAJE
     public void CreacionElemento()
     {
-
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            Ray rayobjecto = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray rayobjeto = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit objetillo;
             int mascara = LayerMask.GetMask("Suelo");
-            if(Physics.Raycast(rayobjecto, out objetillo, mascara))
+            if(Physics.Raycast(rayobjeto, out objetillo, mascara))
             {
                GameObject objetoCreado =  GameObject.Instantiate(Objetos[numeroSeleccionado],objetillo.point , Quaternion.Euler(-90 , 0, 0));
 
                 if (numeroSeleccionado == 2)
                 {
-                   objetoCreado.transform.Rotate(180, -270, 90);
+                    objetoCreado.transform.Rotate(180, -270, 90);
+                    objetoCreado.transform.Translate(0.65f * Vector3.down);
                 }
                 if (numeroSeleccionado == 3)
                 {
                     objetoCreado.transform.Rotate(180, -270, 90);
-                    Vector3 posicion = objetoCreado.transform.position;
-                    posicion.y = 2.5f;
+                    // transform.rotation = 
+                    objetoCreado.transform.Translate(2.3f * Vector3.up); // pos -> (0,2.3,0)
+                    // Vector3 pos = objetoCreado.transform.position
+                    // pos.y = 2.3f
+                    // objetoCreado.transform.position = pos
                 }
 
             }
-         
         }
-    }
+    } 
 
 
     // BOTONES
