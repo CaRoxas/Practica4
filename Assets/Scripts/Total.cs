@@ -44,9 +44,9 @@ public class Total : MonoBehaviour
 
 
             calculo.text = "Numero de Arboles: " + Arboles.Length.ToString() + "\n";
-            calculo.text = calculo.text + " Numero de Frutales: " + Frutales.Length.ToString() +"\n";
+            calculo.text = calculo.text + "Numero de Frutales: " + Frutales.Length.ToString() +"\n";
             calculo.text = calculo.text + "Numero de Graneros: " + Graneros.Length.ToString() + "\n";
-            //calculo.text = calculo.text + "Numero de Estanques: " + Estanques.Length.ToString();
+            calculo.text = calculo.text + "Numero de Estanques: " + Estanques.Length.ToString();
             Panel.SetActive(true);
         
         }

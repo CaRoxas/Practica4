@@ -1204,6 +1204,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   Panel: {fileID: 0}
   Back: {fileID: 0}
   BotonCamara: {fileID: 0}
@@ -1255,7 +1256,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 638279044}
         m_TargetAssemblyTypeName: Crear, Assembly-CSharp
-        m_MethodName: CreacionElemento
+        m_MethodName: CreacionEstanque
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1810,6 +1811,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 919132149155446097, guid: 7a1a4a24178d97b458d822e6e757e4e6, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
   Panel: {fileID: 0}
   Back: {fileID: 0}
   BotonCamara: {fileID: 0}
@@ -2344,7 +2346,7 @@ MonoBehaviour:
   - {fileID: 6836866753246530803, guid: b3b2f4fc13e10ad49a97f28a2b1ac138, type: 3}
   - {fileID: 5326650116861077783, guid: 50f9c7af5c60de14eb4009da47b351c7, type: 3}
   - {fileID: 383593187496613941, guid: 76e7872d2045eb2448c6f2e68fd539ce, type: 3}
-  - {fileID: 0}
+  - {fileID: 7568773666744830363, guid: e72e9d2652c79fe428756031106902ca, type: 3}
   Panel: {fileID: 601843089}
   Back: {fileID: 2087243521}
   BotonCamara: {fileID: 92892071}
@@ -2896,6 +2898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objetos:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

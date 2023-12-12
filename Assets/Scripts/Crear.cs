@@ -59,7 +59,13 @@ public class Crear : MonoBehaviour
 
                 if (numeroSeleccionado == 2)
                 {
-                   objetoCreado.transform.Rotate(90, -90, 0);
+                   objetoCreado.transform.Rotate(180, -270, 90);
+                }
+                if (numeroSeleccionado == 3)
+                {
+                    objetoCreado.transform.Rotate(180, -270, 90);
+                    Vector3 posicion = objetoCreado.transform.position;
+                    posicion.y = 2.5f;
                 }
 
             }
@@ -81,7 +87,7 @@ public class Crear : MonoBehaviour
     {
         numeroSeleccionado = 2;
     }
-    public void CreacionLago()
+    public void CreacionEstanque()
     {
         numeroSeleccionado = 3;
     }
