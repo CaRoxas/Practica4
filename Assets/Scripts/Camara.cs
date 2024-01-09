@@ -11,6 +11,8 @@ public class Camara : MonoBehaviour
     public GameObject BotonCrear;
     public GameObject BotonMundo;
     public GameObject BotonTotal;
+    public GameObject BotonBorrar;
+    public GameObject BotonLimpieza;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,8 @@ public class Camara : MonoBehaviour
             BotonCrear.SetActive(false);
             BotonTotal.SetActive(false);
             BotonMundo.SetActive(false);
+            BotonBorrar.SetActive(false);
+            BotonLimpieza.SetActive(false);
         }
         else
         {
@@ -44,6 +48,8 @@ public class Camara : MonoBehaviour
             BotonCrear.SetActive(true);
             BotonTotal.SetActive(true);
             BotonMundo.SetActive(true);
+            BotonBorrar.SetActive(true);
+            BotonLimpieza.SetActive(true);
         }
     }
     public void MoverCamara()

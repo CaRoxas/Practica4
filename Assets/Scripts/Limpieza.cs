@@ -1,49 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Mundo : MonoBehaviour
+public class Limpieza : MonoBehaviour
 {
-    public GameObject camara;
-    bool activado = false;
     public GameObject BotonCamara;
     public GameObject BotonCrear;
     public GameObject BotonTotal;
+    public GameObject BotonMundo;
     public GameObject BotonBorrar;
-    public GameObject BotonLimpieza;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    bool LimpiarOn = false;
+    int mascara = 1 << 6;
     // Update is called once per frame
     void Update()
     {
         
     }
-    public void Global()
+    public void ActivarLimpieza()
     {
-        if (activado == false)
+        if (LimpiarOn == false)
         {
-            activado = true;
-            camara.transform.position = new Vector3 (551, 20, -15);
+            LimpiarOn = true;
             BotonCamara.SetActive(false);
             BotonCrear.SetActive(false);
             BotonTotal.SetActive(false);
+            BotonMundo.SetActive(false);
             BotonBorrar.SetActive(false);
-            BotonLimpieza.SetActive(false);
         }
         else
         {
-            activado = false;
-            camara.transform.position = new Vector3(551, 7, -1);
+            LimpiarOn = false;
             BotonCamara.SetActive(true);
             BotonCrear.SetActive(true);
             BotonTotal.SetActive(true);
+            BotonMundo.SetActive(true);
             BotonBorrar.SetActive(true);
-            BotonLimpieza.SetActive(true);
         }
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray rayoCamara = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit golpe;
+            if (Physics.Raycast(rayoCamara, out golpe, mascara))
+            {
+                Destroy(golpe.collider.gameObject);
+            }
+        }
     }
 }

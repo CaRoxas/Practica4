@@ -14,6 +14,8 @@ public class Crear : MonoBehaviour
     public GameObject BotonCamara;
     public GameObject BotonTotal;
     public GameObject BotonMundo;
+    public GameObject BotonBorrar;
+    public GameObject BotonLimpieza;
     static int numeroSeleccionado = 0;
     // Update is called once per frame
     void Update()
@@ -32,6 +34,8 @@ public class Crear : MonoBehaviour
             BotonCamara.SetActive(false);
             BotonTotal.SetActive(false);
             BotonMundo.SetActive(false);
+            BotonBorrar.SetActive(false);
+            BotonLimpieza.SetActive(false);
             Back.text = "Atrás";
         }
         else
@@ -41,6 +45,8 @@ public class Crear : MonoBehaviour
             BotonTotal.SetActive(true);
             BotonMundo.SetActive(true);
             Panel.SetActive(false);
+            BotonBorrar.SetActive(true);
+            BotonLimpieza.SetActive(true);
             Back.text = "Crear";
         }
     }
